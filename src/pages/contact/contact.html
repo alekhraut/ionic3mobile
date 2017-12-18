@@ -1,17 +1,16 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
-</ion-content>
+<h3>
+  Questionnaire Form
+  </h3>
+  <div class="fluid-container">
+    <div class="">
+      
+    </div>
+    <div id='surveyElement'></div>
+    <div class="nav-wrapper">
+      <button class="btn btn-primary" (click)="cancelSurvey()">Cancel</button>
+      <button *ngIf="!survey.isFirstPage" class="btn btn-primary" (click)="previousQuestion()">Previous</button>
+      <button *ngIf="!survey.isLastPage" class="btn btn-primary" (click)="nextQuestion()">Next</button>
+      <button *ngIf="survey.isLastPage" class="btn btn-primary" (click)="completeSurvey()">Complete</button>
+    </div>
+  </div>
+  
